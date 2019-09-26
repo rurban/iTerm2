@@ -2294,6 +2294,8 @@
 		A6C763A81B45C52B00E3C992 /* ToolPasteHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8DDAC1415648600F83147 /* ToolPasteHistory.m */; };
 		A6C763A91B45C52B00E3C992 /* ToolProfiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8DC8C1415546000F83147 /* ToolProfiles.m */; };
 		A6C763AA1B45C52B00E3C992 /* iTermToolWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE8DF351415799700F83147 /* iTermToolWrapper.m */; };
+		53E98E7B233C6B760094D8A9 /* iTermTmuxSessionObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 53E98E79233C6B760094D8A9 /* iTermTmuxSessionObject.h */; };
+		53E98E7C233C6B760094D8A9 /* iTermTmuxSessionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E98E7A233C6B760094D8A9 /* iTermTmuxSessionObject.m */; };
 		A6C763AB1B45C52B00E3C992 /* AlertTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DCC15142D7FC10016228A /* AlertTrigger.m */; };
 		A6C763AC1B45C52B00E3C992 /* BellTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DCC0D142D7F5F0016228A /* BellTrigger.m */; };
 		A6C763AD1B45C52B00E3C992 /* BounceTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9DCC09142D7F300016228A /* BounceTrigger.m */; };
@@ -3207,6 +3209,8 @@
 		53AFFC911DD38F1500E6CEC6 /* ToolWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolWebView.m; sourceTree = "<group>"; };
 		53E184EF1FE32F2800DB78F3 /* iTermMetalBufferPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermMetalBufferPool.h; sourceTree = "<group>"; };
 		53E184F01FE32F2800DB78F3 /* iTermMetalBufferPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermMetalBufferPool.m; sourceTree = "<group>"; };
+		53E98E79233C6B760094D8A9 /* iTermTmuxSessionObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTermTmuxSessionObject.h; sourceTree = "<group>"; };
+		53E98E7A233C6B760094D8A9 /* iTermTmuxSessionObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTermTmuxSessionObject.m; sourceTree = "<group>"; };
 		53EBF29B1DCBFF7C00766613 /* iTermAPIServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTermAPIServer.h; sourceTree = "<group>"; };
 		53EBF29C1DCBFF7C00766613 /* iTermAPIServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iTermAPIServer.m; sourceTree = "<group>"; };
 		53EBF29F1DCCF4AC00766613 /* iTermIPV4Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iTermIPV4Address.h; sourceTree = "<group>"; };
@@ -5144,6 +5148,8 @@
 				1DB67CEC14850D53005849A1 /* TmuxWindowOpener.m */,
 				1D0B613B14A7C76500C57C33 /* TmuxWindowsTable.m */,
 				1D3D21941483144600FAC8E7 /* TSVParser.m */,
+				53E98E79233C6B760094D8A9 /* iTermTmuxSessionObject.h */,
+				53E98E7A233C6B760094D8A9 /* iTermTmuxSessionObject.m */,
 			);
 			name = tmux;
 			sourceTree = "<group>";
@@ -7261,6 +7267,7 @@
 				5337A315203E065300024BEA /* iTermPowerManager.h in Headers */,
 				A6588829201F06ED006F48DB /* iTermTexture.h in Headers */,
 				A66719161DCE36C3000CE608 /* NSURL+iTerm.h in Headers */,
+				53E98E7B233C6B760094D8A9 /* iTermTmuxSessionObject.h in Headers */,
 				A66719171DCE36C3000CE608 /* NSDate+iTerm.h in Headers */,
 				A66719181DCE36C3000CE608 /* iTermBaseHotKey.h in Headers */,
 				A66719191DCE36C3000CE608 /* iTermShortcut.h in Headers */,
@@ -7393,6 +7400,7 @@
 				A6CEC0781DCE80C9009F4FD2 /* FieldMask.pbobjc.h in Headers */,
 				A6FEA2781CF2CBCC00376F28 /* iTermAppHotKeyProvider.h in Headers */,
 				A60251681CCD3E5E009BABF1 /* NSURL+iTerm.h in Headers */,
+				53E98E7B233C6B760094D8A9 /* iTermTmuxSessionObject.h in Headers */,
 				1D300BAA1BD9A8BB002043F7 /* NSDate+iTerm.h in Headers */,
 				A685D9FD1E5B6EFC0091C3A7 /* PseudoTerminal+Private.h in Headers */,
 				A6FEA26C1CF2C86800376F28 /* iTermBaseHotKey.h in Headers */,
@@ -8914,6 +8922,7 @@
 				A6DBC04220049CB100F1466D /* iTermImage.metal in Sources */,
 				A67960D11F81FCBB008A42BC /* iTermBackgroundImageRenderer.m in Sources */,
 				A6AC5D241E9036D70097C0A7 /* iTermURLMark.m in Sources */,
+				53E98E7C233C6B760094D8A9 /* iTermTmuxSessionObject.m in Sources */,
 				A66719621DCE3772000CE608 /* iTermSocketAddress.m in Sources */,
 				53AFFC8E1DD2A04100E6CEC6 /* iTermLSOF.m in Sources */,
 				A6C1FD571FC2B210006B9A69 /* iTermMargin.metal in Sources */,

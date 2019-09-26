@@ -2363,6 +2363,11 @@ ITERM_WEAKLY_REFERENCEABLE
     return YES;
 }
 
+- (BOOL)stringIsValidTerminalGuid:(NSString *)string {
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-"];
+    return [string rangeOfCharacterFromSet:characterSet.invertedSet].location == NSNotFound;
+}
+
 - (BOOL)restoreTabsFromArrangement:(NSDictionary *)arrangement sessions:(NSArray<PTYSession *> *)sessions {
     for (NSDictionary *tabArrangement in arrangement[TERMINAL_ARRANGEMENT_TABS]) {
         NSDictionary<NSString *, PTYSession *> *sessionMap = nil;

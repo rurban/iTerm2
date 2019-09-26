@@ -3298,7 +3298,10 @@ static void SetAgainstGrainDim(BOOL isVertical, NSSize *dest, CGFloat value) {
     return tmuxController_;
 }
 
-- (void)replaceViewHierarchyWithParseTree:(NSMutableDictionary *)parseTree {
+- (void)replaceViewHierarchyWithParseTree:(NSMutableDictionary *)parseTree
+                           tmuxController:(TmuxController *)tmuxController {
+    SessionView *nearestNeighbor = [self nearestNeighborOfSession:self.activeSession];
+
     NSMutableDictionary *arrangement = [NSMutableDictionary dictionary];
     parseTree = [PTYTab parseTreeWithInjectedRootSplit:parseTree];
     [arrangement setObject:[PTYTab _recursiveArrangementForDecoratedTmuxParseTree:parseTree

@@ -4356,7 +4356,7 @@ ITERM_WEAKLY_REFERENCEABLE
         [theGuid isEqualToString:_profile[KEY_GUID]]) {
         Profile *profile = [[ProfileModel sessionsInstance] bookmarkWithGuid:theGuid];
         [_tmuxController renameWindowWithId:_delegate.tmuxWindow
-                                  inSession:nil
+                                   inSessionNumber:nil
                                      toName:profile[KEY_NAME]];
         _tmuxTitleOutOfSync = NO;
     }
@@ -4994,7 +4994,7 @@ ITERM_WEAKLY_REFERENCEABLE
     if (remoteHost) {
         return [NSString stringWithFormat:@"%@@%@", remoteHost.username, remoteHost.hostname];
     } else {
-        return _name;
+        return _nameController.presentationSessionTitle;
     }
 }
 
@@ -5312,7 +5312,7 @@ ITERM_WEAKLY_REFERENCEABLE
     // This kicks off a chain reaction that leads to windows being opened.
     [_tmuxController validateOptions];
     [_tmuxController checkForUTF8];
-    [_tmuxController guessVersion];
+    [_tmuxController guessVersion];  // NOTE: This kicks off more stuff that depends on knowing the version number.
 }
 
 - (void)tmuxInitialCommandDidFailWithError:(NSString *)error {
